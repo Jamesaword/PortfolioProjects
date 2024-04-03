@@ -1,0 +1,18 @@
+# function defined
+def fib_finder(n):
+  # catch for the first 2 numbers in the sequence
+  if n == 1:
+    return 0
+  elif n == 2:
+    return 1
+  # loop through the sequence and return the nth number of the sequence
+  else:
+    fib_1 = 0
+    fib_2 = 1 
+    #range is n-2 since we caught the first two numbers of the sequence
+    for i in range(n-2):
+      fib_3 = fib_1 + fib_2
+      fib_1 = fib_2
+      fib_2 = fib_3
+    return fib_3
+print(fib_finder(5))
